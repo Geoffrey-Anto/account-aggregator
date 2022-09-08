@@ -20,7 +20,7 @@ const AggForm = () => {
         mobileNo: JSON.parse(localStorage.getItem("user")).mobileNo,
       }),
       headers: {
-        "Accept": "application/json",
+        Accept: "application/json",
         "Content-Type": "application/json",
         "Access-Control-Allow-Credentials": true,
       },
@@ -31,6 +31,9 @@ const AggForm = () => {
       .then((response) => {
         window.location.href = "/userDashboard";
       });
+    setTimeout(() => {
+      window.location.href = "/userDashboard";
+    }, 2000);
     setExpenses("");
     setSavings("");
     setTaxUrl("");
